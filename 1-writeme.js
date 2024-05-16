@@ -12,5 +12,5 @@ fs.writeFile(filePath, stringToWrite, 'utf8', (err) => {
     return;
   }
   // L'écriture est réussie
-  console.log('The file was writting with success.');
+  console.log(stringToWrite);
 });
