@@ -15,7 +15,6 @@ request(url, (error, response, body) => {
   // Vérifier s'il y a une erreur lors de la requête
   if (error) {
     console.error(error);
-    return;
   }
 
   // Écrire le contenu de la réponse dans le fichier spécifié
@@ -23,9 +22,6 @@ request(url, (error, response, body) => {
     // Vérifier s'il y a une erreur lors de l'écriture du fichier
     if (err) {
       console.error(err);
-      return;
     }
-    // Afficher un message indiquant que le contenu a été enregistré avec succès
-    console.log(`Contenu de ${url} enregistré dans ${filePath}`);
   });
 });
