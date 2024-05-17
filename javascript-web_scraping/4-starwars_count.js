@@ -10,11 +10,10 @@ const apiUrl = process.argv[2];
 const characterId = 18;
 
 // Effectuer une requête à l'API Star Wars pour obtenir les détails des films
-request(apiUrl, (error, response, body) => {
+request(apiUrl, (err, response, body) => {
     // Vérifier si une erreur est survenue
-    if (error) {
-        console.error(error);
-        return;
+    if (err) {
+        console.error(err);
     }
 
     // Analyser la réponse JSON
