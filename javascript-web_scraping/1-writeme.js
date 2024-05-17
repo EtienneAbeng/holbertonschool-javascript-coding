@@ -12,6 +12,4 @@ fs.writeFile(filePath, stringToWrite, 'utf8', (err) => {
     // Si une erreur s'est produite pendant l'écriture, afficher l'objet d'erreur
     console.error(err);
   }
-  // L'écriture est réussie
-  console.log(stringToWrite);
 });
