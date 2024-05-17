@@ -37,5 +37,5 @@ request(apiUrl, (error, response, body) => {
 
 
     // Afficher le nombre de films dans lesquels "Wedge Antilles" apparaît
-    console.log(`Wedge Antilles appears in ${count} films`);
+    console.log(count);
 })
