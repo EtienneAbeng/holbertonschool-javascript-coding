@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const request = require('request'); // Importe le module 'request' pour effectuer des requêtes HTTP
 
 // Construit l'URL de l'API Star Wars en ajoutant l'ID du film passé en argument

@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 // Import the fs (file system) module from Node.js
 const fs = require('fs');
 

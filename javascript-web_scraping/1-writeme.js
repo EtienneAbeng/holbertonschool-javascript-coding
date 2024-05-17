@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const fs = require('fs');
 
 // Récupérer le chemin du fichier et la chaîne à écrire depuis les arguments de la ligne de commande
