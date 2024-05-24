@@ -7,7 +7,7 @@ const request = require('request');
 const apiUrl = process.argv[2];
 
 // ID du personnage "Wedge Antilles"
-const characterId = 18;
+const characterId = '18';
 
 // Effectuer une requête à l'API Star Wars pour obtenir les détails des films
 request(apiUrl, (err, response, body) => {
@@ -33,7 +33,6 @@ request(apiUrl, (err, response, body) => {
             }
         }
     }
-
 
     // Afficher le nombre de films dans lesquels "Wedge Antilles" apparaît
     console.log(count);
