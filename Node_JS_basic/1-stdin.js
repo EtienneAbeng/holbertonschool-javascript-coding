@@ -1,18 +1,20 @@
-// Affichez le message de bienvenue
-console.log('Welcome to Holberton School, what is your name?');
+// Affiche un message de bienvenue et demande le nom de l'utilisateur
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-// Écoutez l'entrée standard (stdin)
-process.stdin.setEncoding('utf8');
-process.stdin.on('data', (data) => {
-  // Supprimez les sauts de ligne et espaces inutiles
-  const name = data.trim();
+// Écoute l'événement 'readable' sur stdin
+process.stdin.on('readable', () => {
+  // Lit les données de stdin
+  const name = process.stdin.read();
   
-  // Affichez le nom de l'utilisateur
-  console.log(`Your name is: ${name}`);
+  // Si des données ont été lues, affiche le nom de l'utilisateur
+  if (name !== null) {
+    // Utilise trim() pour supprimer les espaces et les sauts de ligne superflus
+    process.stdout.write(`Your name is: ${name.trim()}\n`);
+  }
+});
 
-  // Affichez le message de fermeture
-  console.log('This important software is now closing');
-  
-  // Arrêtez le processus
-  process.exit();
+// Écoute l'événement 'end' sur stdin, qui se produit quand l'utilisateur termine l'entrée
+process.stdin.on('end', () => {
+  // Affiche un message de fermeture
+  process.stdout.write('This important software is now closing\n');
 });
